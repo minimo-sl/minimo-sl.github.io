@@ -174,13 +174,19 @@
             <div class="contact-form-wrapper">
               <h2 class="text-center mb-4">Get in Touch</h2>
 
-              <form action="https://formsubmit.co/minimo.dev@gmail.com" method="post" class="php-email-form">
+              <form action="https://formsubmit.co/minimo.dev@gmail.com" method="POST" enctype="multipart/form-data" class="php-email-form">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> <!-- Replace with your thank you page -->
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <input type="hidden" name="_template" value="table"> <!-- Better email formatting -->
+                
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="input-with-icon">
                         <i class="bi bi-person"></i>
-                        <input type="text" class="form-control" name="name" placeholder="First Name" required="">
+                        <input type="text" class="form-control" name="name" placeholder="First Name" required>
                       </div>
                     </div>
                   </div>
@@ -189,7 +195,7 @@
                     <div class="form-group">
                       <div class="input-with-icon">
                         <i class="bi bi-envelope"></i>
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                        <input type="email" class="form-control" name="email" placeholder="Email Address" required>
                       </div>
                     </div>
                   </div>
@@ -198,7 +204,7 @@
                     <div class="form-group">
                       <div class="input-with-icon">
                         <i class="bi bi-text-left"></i>
-                        <input type="text" class="form-control" name="sbject" placeholder="Subject" required="">
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required> <!-- Fixed typo in 'sbject' -->
                       </div>
                     </div>
                   </div>
@@ -207,10 +213,12 @@
                     <div class="form-group">
                       <div class="input-with-icon">
                         <i class="bi bi-chat-dots message-icon"></i>
-                        <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
+                        <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required></textarea>
                       </div>
                     </div>
                   </div>
+
+                  
 
                   <div class="col-12">
                     <div class="loading">Loading</div>

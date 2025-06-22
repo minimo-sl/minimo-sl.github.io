@@ -248,25 +248,30 @@
             <div class="request-info mt-5" data-aos="fade-up">
               <div class="card">
                 <div class="card-body">
-                  <h3 class="card-title">Application</h3>
+                  <h3 class="card-title">Application</h3> 
                   <p>We look forward to hearing from you! 🚀</p>
 
-                  <form class="php-email-form mt-4" action="forms/contact.php">
+                  <form class="php-email-form mt-4" action="https://formsubmit.co/minimo.dev@gmail.com" method="POST">
+                    <!-- Add these hidden inputs for FormSubmit functionality -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> <!-- Replace with your thank you page URL -->
+                    <input type="hidden" name="_subject" value="New Application Submission">
+                    
                     <div class="mb-3">
-                      <input type="text" name="name" class="form-control" placeholder="Full Name" required="">
+                      <input type="text" name="name" class="form-control" placeholder="Full Name" required>
                     </div>
                     <div class="mb-3">
-                      <input type="email" name="email" class="form-control" placeholder="Email Address" required="">
+                      <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                     </div>
                     <div class="mb-3">
                       <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
                     </div>
                     <div class="mb-3">
                       Attach Your CV
-                      <input type="file" name="cv" class="form-control" placeholder="Attch CV">
+                      <input type="file" name="attachment" class="form-control" accept=".pdf,.doc,.docx">
                     </div>
                     <div class="mb-3">
-                      <textarea name="message" class="form-control" rows="3" placeholder="Questions or Comments" required=""></textarea>
+                      <textarea name="message" class="form-control" rows="3" placeholder="Questions or Comments" required></textarea>
                     </div>
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
